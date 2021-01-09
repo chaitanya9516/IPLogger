@@ -20,10 +20,3 @@
     });
 
 }
-
-//function table() { 
-//    const new_div = '<div class="container-fluid"><table class="table table-borderless"><thead><tr><th scope="col">IP address</th><th scope="col">Browser</th><th scope="col">OS</th><th scope="col">Device Type</th><th scope="col">Time (IST)</th></tr></thead>';
-//    debugger;
-   
-
-//}
