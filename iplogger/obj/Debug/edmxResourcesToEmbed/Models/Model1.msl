@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="iplogggerModelStoreContainer" CdmEntityContainer="iplogggerEntities1">
+    <EntitySetMapping Name="data">
+      <EntityTypeMapping TypeName="iplogggerModel.datum">
+        <MappingFragment StoreEntitySet="data">
+          <ScalarProperty Name="uniqueid" ColumnName="uniqueid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+          <ScalarProperty Name="browser" ColumnName="browser" />
+          <ScalarProperty Name="os" ColumnName="os" />
+          <ScalarProperty Name="devicetype" ColumnName="devicetype" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="links">
+      <EntityTypeMapping TypeName="iplogggerModel.link">
+        <MappingFragment StoreEntitySet="links">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="trackingid" ColumnName="trackingid" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

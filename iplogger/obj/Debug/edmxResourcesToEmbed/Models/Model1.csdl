@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iplogggerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="datum">
+    <Key>
+      <PropertyRef Name="uniqueid" />
+    </Key>
+    <Property Name="uniqueid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ipaddress" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="browser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="os" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="devicetype" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="link">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="trackingid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="iplogggerEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="data" EntityType="Self.datum" />
+    <EntitySet Name="links" EntityType="Self.link" />
+  </EntityContainer>
+</Schema>
